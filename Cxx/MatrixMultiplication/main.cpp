@@ -1,5 +1,5 @@
-#include <iostream>
 #include <vector>
+#include <iostream>
 
 template<typename T>
 std::vector<std::vector<T>> matrix_multiplication(std::vector<std::vector<T>>& a, std::vector<std::vector<T>>& b, T n)
