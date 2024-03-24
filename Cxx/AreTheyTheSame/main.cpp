@@ -1,22 +1,22 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
-#include <math.h>
 
 class Same {
 public :
     static bool comp(std::vector<int>&a, std::vector<int>&b) {
         
-        std::vector<int> nums;
-
-        for (int val : b)
+        for (int item : a)
         {
-            if (std::find(a.begin(), a.end(), sqrt(val)) == std::end(a))
+            std::vector<int>::iterator check{std::find_if(b.begin(), b.end(), item * item)};
+
+            if (check == b.end())
             {
                 return false;
             }
         }
 
+        
         return true;
     }
 };
