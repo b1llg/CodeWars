@@ -5,11 +5,26 @@ module Solution
       integer, intent(in)       :: a, d, n
       integer                   :: i
       character(:), allocatable :: sequence
+      character(len = 1024)     :: temp
 
       sequence = "" ! TODO
 
-      do i=0,n-1
-        write(sequence,'(A)') a + i*d
+      ! Case where n = 0
+
+      if (n .eq. 0) then
+        return
+      end if
+        
+      write(temp, '(I0)') a + i*d
+
+      sequence = sequence // trim(temp)
+
+      do i=1,n-1
+       
+        write(temp, '(I0)') a + i*d
+
+        sequence = sequence // ', ' // trim(temp)
+
       end do
 
 

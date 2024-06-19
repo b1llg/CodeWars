@@ -1,10 +1,8 @@
 program main
-    ! use Solution
+    use Solution
+
     implicit none
-    character(:), allocatable :: c
 
-    ! print*,arithmeticSequenceElements(1,2,5)
-
-    allocate()
+    print*,arithmeticSequenceElements(1,-2,5)
     
 end program main
